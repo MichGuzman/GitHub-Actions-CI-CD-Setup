@@ -1,5 +1,4 @@
 import { defineConfig } from 'cypress';
-import viteConfig from '../vite.config';
 
 export default defineConfig({
   component: {
@@ -11,7 +10,6 @@ export default defineConfig({
         server: {
           port: 5173
         },
-        // puedes agregar más aquí si necesitas
       },
     },
   },

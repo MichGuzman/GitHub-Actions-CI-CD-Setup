@@ -6,22 +6,15 @@ on:
       - develop
 
 jobs:
-  cypress-tests:
+  cypress-run:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Run Cypress Tests
+        uses: cypress-io/github-action@v6
         with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./client
-
-      - name: Run Cypress component tests
-        run: npm run test:component
-        working-directory: ./client
+          working-directory: client
+          component: true

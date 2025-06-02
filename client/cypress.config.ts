@@ -7,14 +7,12 @@ export default defineConfig({
     devServer: {
       framework: 'react',
       bundler: 'vite',
-      viteConfig,
-    },
-  },
-
-  e2e: {
-    baseUrl: 'http://localhost:3001',
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+      viteConfig: {
+        server: {
+          port: 5173
+        },
+        // puedes agregar más aquí si necesitas
+      },
     },
   },
 });

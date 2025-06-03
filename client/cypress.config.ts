@@ -8,9 +8,10 @@ export default defineConfig({
       bundler: 'vite',
       viteConfig: {
         server: {
-          port: 5173
+          port: 5173,
         },
       },
     },
+    supportFile: 'cypress/support/component.ts',
   },
 });

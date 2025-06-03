@@ -1,4 +1,5 @@
-// client/cypress.config.ts
+import { defineConfig } from 'cypress';
+
 export default defineConfig({
   component: {
     port: 5173,
@@ -11,6 +12,6 @@ export default defineConfig({
         },
       },
     },
-    supportFile: 'cypress/support/component.js', // 👈 Asegúrate de cambiar esto
+    supportFile: 'cypress/support/component.js',
   },
 });

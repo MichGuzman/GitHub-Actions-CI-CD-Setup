@@ -1,1 +1,0 @@
-// Cypress component support file

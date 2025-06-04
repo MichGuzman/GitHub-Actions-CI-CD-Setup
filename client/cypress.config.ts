@@ -1,13 +1,12 @@
-import { defineConfig } from 'cypress';
-import viteConfig from './vite.config';
+import { defineConfig } from 'cypress'
+import viteConfig from './vite.config'
 
 export default defineConfig({
   component: {
     devServer: {
       framework: 'react',
       bundler: 'vite',
-      viteConfig,
+      viteConfig, // ✅ usa la importación correcta
     },
-    supportFile: 'cypress/support/component.js',
   },
-});
+})

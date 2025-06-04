@@ -1,17 +1,17 @@
+import React from 'react';
 import { mount } from 'cypress/react';
-import Quiz from "../../src/components/Quiz";
-
-Cypress.Commands.add('mount', mount);
+import Quiz from '../../src/components/Quiz';
 
 describe('Quiz Component', () => {
   beforeEach(() => {
-    cy.intercept({
+    cy.intercept(
+      {
         method: 'GET',
-        url: '/api/questions/random'
+        url: '/api/questions/random',
       },
       {
         fixture: 'questions.json',
-        statusCode: 200
+        statusCode: 200,
       }
     ).as('getRandomQuestion');
   });
